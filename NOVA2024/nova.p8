@@ -23,6 +23,8 @@ color(7) -- white(ish) foreground
 ?"\14\^t\^=".."a  a     hjmhj"
 ?"\14\^t\^=".."a  de    iklioe"
 ?""
+?""
+?""
 --      "0123456789abcdef" 128chrs wide
 
 

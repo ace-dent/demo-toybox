@@ -10,6 +10,8 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 14:35 Use ImageMagick to slice up Pulp export into individual tiles.  
 15:26 Back to Pulp to try tweaking the logo design a little, for thinner horizontal lines.  
 16:00 New design looks better. Make tiles and convert to P8 code.  
+16:14 Just spotted a couple of pixels off in the artwork. One is a quick fix, the other would add a tile to the leading stroke of `V`, so will ignore it.  
+
 
 
 ## Coding
