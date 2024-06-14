@@ -27,4 +27,4 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 21:15 Now optimize the print stream for drawing the logo.  
 21:30 Break!  
 23:15 Work a bit on presentation. Let's get this vertically centered! 128-(3*8*2)=80. Need 40px at top- 5 rows (single spaced). Repeat line feeds "\*5\n" → "¹5\n" →  vertical cursor move "⁴🅾️" approx.  
-
+00:08 Fixed typo breakage. Trying to pick some nicer colors and make things look nicer with teletype printing.  
