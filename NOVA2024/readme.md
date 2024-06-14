@@ -24,3 +24,4 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 20:30 Back in the saddle... At NOVA! Sizecoding first to see what we have to work with...  
 20:45 Double checking how the tile data is stored; counting repeatitions.  
 21:10 Combined the tile set into one data stream, embedded in the file. 154 chrs.  
+21:15 Now optimize the print stream for drawing the logo.  
