@@ -12,14 +12,19 @@ poke(0x5600,8,8,8,0,0)
 #include tileset.p8.lua
 
 cls(0)
-color(7) -- white(ish) foreground
 
+-- quick hack to complete the logo
+ovalfill(32+4,0,32+32,3*8*2,1)
+
+
+color(7) -- white(ish) foreground
 -- write patterns to screen
-?"\14".."abbc   fbg ng"
-?"\14".."a  a     hjmhj"
-?"\14".."a  de    iklioe"
+?"\14\^t\^=".."abbc   fbg ng"
+?"\14\^t\^=".."a  a     hjmhj"
+?"\14\^t\^=".."a  de    iklioe"
 ?""
 --      "0123456789abcdef" 128chrs wide
+
 
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
