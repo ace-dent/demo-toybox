@@ -4,15 +4,12 @@ __lua__
 --nova 2024 (wip)
 --by ace_dent
 
---setup custom font as 8x8px
-?"⁶@56000003⁸x⁸"
-
 --poke the tileset data
---into a custom font
---data dump incoming...
-?"⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
--- total 154 chrs to store 120 bytes
-
+--into a custom font.
+--setup font as 8x8px
+--then dump data in 'a' onwards
+?"⁶@56000003⁸x⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
+-- total 167 chrs
 
 cls(0)
 
@@ -24,7 +21,8 @@ color(7) -- white(ish) foreground
 
 -- write logo to screen
 ?"ᵉ⁶t⁶=abbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe"
-
+-- 52 chrs
+--TODO: Add delay between printing each chr "\^d5"
 
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

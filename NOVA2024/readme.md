@@ -11,7 +11,7 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 15:26 Back to Pulp to try tweaking the logo design a little, for thinner horizontal lines.  
 16:00 New design looks better. Make tiles and convert to P8 code.  
 16:14 Just spotted a couple of pixels off in the artwork. One is a quick fix, the other would add a tile to the leading stroke of `V`, so will ignore it.  
-
+21:42 If bytes allow, can scroll with cursor(-x), or flip 90deg and scroll... this would allow a bigger logo effect...
 
 
 ## Coding
@@ -25,3 +25,5 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 20:45 Double checking how the tile data is stored; counting repeatitions.  
 21:10 Combined the tile set into one data stream, embedded in the file. 154 chrs.  
 21:15 Now optimize the print stream for drawing the logo.  
+21:30 Work a bit on presentation. Let's get this vertically centered! 128-(3*8*2)=80. Need 40px at top- 5 rows (single spaced).
+"\*5\n" → "¹5\n" → "
