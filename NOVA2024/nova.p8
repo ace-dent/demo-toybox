@@ -5,11 +5,21 @@ __lua__
 --by ace_dent
 
 --setup custom font as 8x8px
-poke(0x5600,8,8,8,0,0)
--- print"⁶@56000003⁸x⁸"
+-- poke(0x5600,8,8,8,0,0)
+?"⁶@56000003⁸x⁸"
 
 --tileset
-#include tileset.p8.lua
+--#include tileset.p8.lua
+
+--poke the tileset data
+--into a custom font
+--data dump incoming...
+?"⁶!5908".."ヲヲヲヲヲヲヲヲ".."◝◝◝◝\0\0\0\0"
+
+-- poke overhead of 8 bytes
+-- then 8 bytes per chr
+-- total ~ 128 bytes
+
 
 cls(0)
 
@@ -18,7 +28,7 @@ ovalfill(32+4,0,32+32,3*8*2,1)
 
 
 color(7) -- white(ish) foreground
--- write patterns to screen
+-- write logo to screen
 ?"\14\^t\^=".."abbc   fbg ng"
 ?"\14\^t\^=".."a  a     hjmhj"
 ?"\14\^t\^=".."a  de    iklioe"

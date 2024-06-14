@@ -21,3 +21,5 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 15:12 Drawing full tileset logo in P8. Concern is that the print code takes 74chrs (unoptimized). Perhaps I should have stored artwork at half-height and then doubled on rendering...?  
 15:24 Playing around with P8 font modifier [effects](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes#Changing_character_rendering_modes). Not sure I like the thicker horizontal lines in the artwork.  
 16:05 Quick hack to draw oval in place of `O` to complete the logo. Looking good. Taking a break to recharge and may head to the party!  
+20:30 Back in the saddle... At NOVA! Sizecoding first to see what we have to work with...  
+20:45 Double checking how the tile data is stored; counting repeatitions.
