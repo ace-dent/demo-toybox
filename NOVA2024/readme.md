@@ -11,4 +11,5 @@
 
 ## Coding
 
-14:45 Repurposing a bash script to convert png tiles into P8 code snippets
+14:45 Repurposing a bash script to convert png tiles into P8 code snippets  
+15:05 We have an `N`! 🎉
