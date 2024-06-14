@@ -22,4 +22,5 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 15:24 Playing around with P8 font modifier [effects](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes#Changing_character_rendering_modes). Not sure I like the thicker horizontal lines in the artwork.  
 16:05 Quick hack to draw oval in place of `O` to complete the logo. Looking good. Taking a break to recharge and may head to the party!  
 20:30 Back in the saddle... At NOVA! Sizecoding first to see what we have to work with...  
-20:45 Double checking how the tile data is stored; counting repeatitions.
+20:45 Double checking how the tile data is stored; counting repeatitions.  
+21:10 Combined the tile set into one data stream, embedded in the file. 154 chrs.  

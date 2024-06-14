@@ -1,4 +1,6 @@
-
+-- Possible optimization:
+-- Just encode 2x used tiles in font,
+-- then encode single use tiles directly in the print stream...?
 
 --97 'a' tile_a -- USED x4
 poke(0x5600+(8* 97), --starting at 0x5908 (No compact number form).
