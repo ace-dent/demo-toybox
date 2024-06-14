@@ -23,8 +23,8 @@ ovalfill(32+4,0,32+32,3*8*2,1)
 color(7) -- white(ish) foreground
 -- write logo to screen
 ?"\14\^t\^=".."abbc   fbg ng"
-?"\14\^t\^=".."a  a     hjmhj" --OPTIM: "¹5 " repeated spaces
-?"\14\^t\^=".."a  de    iklioe" --OPTIM: "¹4 " repeated spaces
+?"\14\^t\^=".."a  a¹5 hjmhj"
+?"\14\^t\^=".."a  de¹4 iklioe"
 ?""
 ?""
 ?""
