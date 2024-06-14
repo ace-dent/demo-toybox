@@ -11,6 +11,7 @@ __lua__
 ?"⁶@56000003⁸x⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
 -- total 167 chrs
 
+
 cls(0)
 
 -- quick hack to complete the logo
@@ -19,9 +20,9 @@ ovalfill(32+4,0,32+32,3*8*2,1)
 
 color(7) -- white(ish) foreground
 
--- write logo to screen
-?"ᵉ⁶t⁶=abbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe"
--- 52 chrs
+-- draw logo to screen
+?"⁴🅾️ᵉ⁶t⁶=abbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
+-- 56 chrs
 --TODO: Add delay between printing each chr "\^d5"
 
 __gfx__
