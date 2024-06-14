@@ -15,9 +15,10 @@ cls(0)
 color(7) -- white(ish) foreground
 
 -- write patterns to screen
-?"\14".."abbc"
-?"\14".."a  a"
-?"\14".."a  de"
+?"\14".."abbc   fbg ng"
+?"\14".."a  a     hjmhj"
+?"\14".."a  de    iklioe"
+?""
 --      "0123456789abcdef" 128chrs wide
 
 __gfx__
