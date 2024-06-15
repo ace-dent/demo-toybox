@@ -34,3 +34,4 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 01:00 Grateful to Dave for guidance on exporting [rom](http://www.sizecoding.org/wiki/PICO-8#Tiny_ROM_Export), is PXA compressed. May be able to some scrolling. Now I have cut a release ROM, will try to go a bit further.  
 09:10 Around 2am, satisified I can pack a nicer scrolling logo; will start to back-port the hacked together version.  
 09:40 Tweaking scrolling function using sine to get a nice back-and-forth oscillation.  
+10:00 Finally happy with how this little demo looks. Now size coding to check we can fit!  

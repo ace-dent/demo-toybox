@@ -26,10 +26,9 @@ circ(98+i,54,40+(i/5),9)
 cursor(i,32,2)
 
 -- draw logo to screen
-?"ᵉ⁶pabbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
--- 58 chrs
+-- then flip and cls
+?"ᵉ⁶pabbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n⁶1⁶c"
+-- 56 chrs
 
 x=x+1
-flip()
-cls()
 goto ★
