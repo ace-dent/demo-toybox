@@ -8,12 +8,18 @@
 ?"⁶@56000003⁸x⁸⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
 -- total 167 chrs
 
+--Scroll offset
+x=4
+
 -- prepare screen
 cls()
-fillp(▒)
-ovalfill(36,30,72,80,1)
-cursor(4,32,2)
--- 51 chrs
+
+--Draw the 'O' in NOVA
+circ(98+x,54,40+(x/10),9)
+
+--Use carriage position to scroll
+--the doubled text across the viewport
+cursor(x,32,2)
 
 -- draw logo to screen
 ?"ᵉ⁶pabbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
@@ -21,7 +27,6 @@ cursor(4,32,2)
 
 
 --2am hacked version to back-port and improve
--- ?"⁶@56000003⁸x⁸⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
 -- x=-256d=1
 -- ::★::
 -- circ(98+x,54,40+(x/10),9)
