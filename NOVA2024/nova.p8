@@ -13,5 +13,5 @@ cls()fillp(▒)ovalfill(36,30,72,80,1)cursor(4,32,2)
 -- 51 chrs
 
 -- draw logo to screen
-?"\^d4ᵉ⁶t⁶=abbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
+?"⁶4ᵉ⁶t⁶=abbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
 -- 58 chrs
