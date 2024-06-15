@@ -28,3 +28,6 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 21:30 Break!  
 23:15 Work a bit on presentation. Let's get this vertically centered! 128-(3*8*2)=80. Need 40px at top- 5 rows (single spaced). Repeat line feeds "\*5\n" → "¹5\n" →  vertical cursor move "⁴🅾️" approx.  
 00:08 Fixed typo breakage. Trying to pick some nicer colors and make things look nicer with teletype printing.  
+01:00 Grateful to Dave for guidance on exporting [rom](http://www.sizecoding.org/wiki/PICO-8#Tiny_ROM_Export), is PXA compressed. May be able to some scrolling. Now I have cut a release ROM, will try to go a bit further.  
+09:10 Around 2am, satisified I can pack a nicer scrolling logo; will start to back-port the hacked together version.  
+
