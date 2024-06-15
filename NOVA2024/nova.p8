@@ -9,13 +9,11 @@
 -- total 167 chrs
 
 --scroll offset
-x=130
+x=140
 
-::★::
--- prepare screen
-cls()
-print(x)
-print(i)
+
+::★:: -- loop it!
+
 
 --scroll function
 i=(sin(x/500)*150)-100
@@ -31,6 +29,7 @@ cursor(i,32,2)
 ?"ᵉ⁶pabbc   fbg ng\na  a¹5 hjmhj\na  de¹4 iklioe\n"
 -- 58 chrs
 
-flip()
 x=x+1
+flip()
+cls()
 goto ★
