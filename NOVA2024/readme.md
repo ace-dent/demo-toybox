@@ -1,6 +1,10 @@
-# Notes
 
-## Artwork
+# 10PRINT"NOVA"
+
+
+## DevLog
+
+### Artwork
 
 Start - Hacking away with Affinity Designer to try and make some tiling version of the NOVA logo.
 13:00 After the challenge to convert the vector logo into 8x8px tile artwork, we can start to create and test a til  eset using [Pulp](https://play.date/pulp/) for PlayDate.  
@@ -13,8 +17,7 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 16:14 Just spotted a couple of pixels off in the artwork. One is a quick fix, the other would add a tile to the leading stroke of `V`, so will ignore it.  
 21:42 If bytes allow, can scroll with cursor(-x), or flip 90deg and scroll... this would allow a bigger logo effect...
 
-
-## Coding
+### Coding
 
 14:45 Repurposing a bash script to convert png tiles into P8 code snippets  
 15:05 We have an `N`! 🎉  
@@ -30,4 +33,4 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 00:08 Fixed typo breakage. Trying to pick some nicer colors and make things look nicer with teletype printing.  
 01:00 Grateful to Dave for guidance on exporting [rom](http://www.sizecoding.org/wiki/PICO-8#Tiny_ROM_Export), is PXA compressed. May be able to some scrolling. Now I have cut a release ROM, will try to go a bit further.  
 09:10 Around 2am, satisified I can pack a nicer scrolling logo; will start to back-port the hacked together version.  
-
+09:40 Tweaking scrolling function using sine to get a nice back-and-forth oscillation.  
