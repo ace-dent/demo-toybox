@@ -36,6 +36,9 @@ readonly p8_map_length=${#p8_map}
 
 img_counter=0
 
+# Concatenate all tiles into one data dump
+p8_tileset_data=""
+
 echo ''
 echo 'Crunching images into patterns...'
 while (( "$#" )); do
@@ -133,12 +136,12 @@ while (( "$#" )); do
     done
     printf ')\n'
     # Helper code snippet to copy font character to Sprite 0
-    printf -- '-->spr0: print"⁶@56000003⁸x⁸⁶c0ᵉ%c"for i=0,448,64do memcpy(i,24576+i,4)end cstore()\n' \
-      "${p8_mapped_char}"
+    # printf -- '-->spr0: print"⁶@56000003⁸x⁸⁶c0ᵉ%c"for i=0,448,64do memcpy(i,24576+i,4)end cstore()\n' \
+    #   "${p8_mapped_char}"
   } >> "${p8_file}"
   # Bonus: 'magic' one-off character, encoded as a string
   # We store the end of the string first
-  encoded_string='"'
+  encoded_string=''
   digit_present=0
   for row in {8..1}; do
     # Find the decimal value for the current row (byte)
@@ -160,22 +163,11 @@ while (( "$#" )); do
     fi
     encoded_string="${encoded_byte}${encoded_string}" # Prepend byte to magic string
   done
-  printf -- '--magic: ?"⁶rw¹シ⁶.".."%s\n' "${encoded_string}" >> "${p8_file}"
-  # Bonus: For 4x4px patterns produce fillp() alternative
-  if [ ${pattern_width} -le 4 ] && [ ${pattern_height} -le 4 ]; then
-    # The hex value for PICO-8 can be reused for Picotron
-    pico_fillp_string='0x'
-    for row in {1..4}; do
-      # Invert bits 0<>1 to fix fore-/background
-      binary_str=$(sed -n ${row}p "${bin_h}"\
-        | head -c 4\
-        | tr '01' '10')
-      value_hex=$( printf '%X' $((2#${binary_str})) )
-      pico_fillp_string="${pico_fillp_string}${value_hex}"
-    done
-    printf -- '--fillp(%u)\n' "${pico_fillp_string}" >> "${p8_file}"
-  fi
+  printf -- '--magic: ?"⁶rw¹シ⁶.".."%s"\n' "${encoded_string}" >> "${p8_file}"
 
+
+  # Add to main tile set data set (truncate last chr `"`)
+  p8_tileset_data="${p8_tileset_data}${encoded_string}"
 
 
   # Remove temporary files
@@ -185,6 +177,9 @@ while (( "$#" )); do
   shift
 done
 
+
+# Output main tile set data set
+printf -- '\n\n"⁶@56000003⁸x⁸⁶!5908%s"\n' "${p8_tileset_data}" >> "${p8_file}"
 
 
 # If defined, use P8 to create a sprite sheet for the final image's group
