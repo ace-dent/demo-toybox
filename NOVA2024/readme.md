@@ -1,9 +1,10 @@
 # 10PRINT"NOVA"
 
-256 byte demo, written at the NOVA 2024 party.
+256 byte demo, written at the NOVA 2024 party.  
+First demo party, first entry and first time size coding! Fresh off the press, 24hr production 😅.  
 
-Rendered using (mainly) PICO-8 print statements with some crafty control characters.
-First demo party, first entry and first time size coding! Fresh off the press, 24hr production 😅.
+Rendered using (mainly) PICO-8 print statements with some crafty P8SCII control characters [(1)](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes)[(2)](https://pico-8.fandom.com/wiki/P8SCII). I think it demonstrates quite an interesting way to encode bitmaps.
+
 
 
 ```lua
@@ -15,9 +16,13 @@ x=x+1goto a
 ```
 
 <br>
-<img width="256" height="256" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
-<br>
 
+<details>
+    <summary>Preview spoiler...</summary>
+    <img width="256" height="256" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
+</details>
+
+<br>
 
 ---
 
@@ -26,7 +31,7 @@ x=x+1goto a
 
 ### Artwork
 
-Start - Hacking away with Affinity Designer to try and make some tiling version of the NOVA logo.
+Start - Hacking away with Affinity Designer to try and make some tiling version of the NOVA logo.  
 13:00 After the challenge to convert the vector logo into 8x8px tile artwork, we can start to create and test a til  eset using [Pulp](https://play.date/pulp/) for PlayDate.  
 13:08 So far the `N` takes 6 tiles.  
 14:00 Adding down slopes for `V` and `A`, now at 9 tiles.  
@@ -35,7 +40,7 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 15:26 Back to Pulp to try tweaking the logo design a little, for thinner horizontal lines.  
 16:00 New design looks better. Make tiles and convert to P8 code.  
 16:14 Just spotted a couple of pixels off in the artwork. One is a quick fix, the other would add a tile to the leading stroke of `V`, so will ignore it.  
-21:42 If bytes allow, can scroll with cursor(-x), or flip 90deg and scroll... this would allow a bigger logo effect...
+21:42 If bytes allow, can scroll with cursor(-x), or flip 90deg and scroll... this would allow a bigger logo effect...  
 12:00 Achieved a decent bouncy scroll. Yay!
 
 ### Coding
@@ -59,5 +64,5 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 10:30 Size coding - go! Concatenated and comments removed, ROM is 259 bytes!  
 10:35 Hacking with [PXA Viz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) to grab those 3 bytes!!  
 10:50 Plan is to rearrange tile data for better compressability. Spent 1.5hr on this. No joy but improved scripting!  
-11:30 Finally saved the bytes. Making text more compressible. 
+11:30 Finally saved the bytes. Making text more compressible.  
 12:00 `EXPORT -T 10PRINT"NOVA".P8.ROM` Submitted first 256b compo entry! 🥳
