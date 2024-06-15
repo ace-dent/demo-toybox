@@ -1,5 +1,25 @@
-
 # 10PRINT"NOVA"
+
+256 byte demo, written at the NOVA 2024 party.
+
+Rendered using (mainly) PICO-8 print statements with some crafty control characters.
+First demo party, first entry and first time size coding! Fresh off the press, 24hr production 😅.
+
+
+```lua
+--10print"nova"
+--by ace_dent for nova 2024
+x=140?"⁶@56000003⁸x⁸⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
+::a::i=(sin(x/500)*150)-100circ(98+i,54,40+(i/5),9)circ(98+i,54,25+(i/2),10)cursor(i,32,2)?"ᵉ⁶pabbc000fbg0ng\na00a00000hjmhj\na00de0000iklioe\n⁶1⁶c"
+x=x+1goto a
+```
+
+<br>
+<img width="256" height="256" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
+<br>
+
+
+---
 
 
 ## DevLog
@@ -16,6 +36,7 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 16:00 New design looks better. Make tiles and convert to P8 code.  
 16:14 Just spotted a couple of pixels off in the artwork. One is a quick fix, the other would add a tile to the leading stroke of `V`, so will ignore it.  
 21:42 If bytes allow, can scroll with cursor(-x), or flip 90deg and scroll... this would allow a bigger logo effect...
+12:00 Achieved a decent bouncy scroll. Yay!
 
 ### Coding
 
@@ -35,4 +56,8 @@ Start - Hacking away with Affinity Designer to try and make some tiling version 
 09:10 Around 2am, satisified I can pack a nicer scrolling logo; will start to back-port the hacked together version.  
 09:40 Tweaking scrolling function using sine to get a nice back-and-forth oscillation.  
 10:00 Finally happy with how this little demo looks. Now size coding to check we can fit!  
-10:30 Size coding - go!  
+10:30 Size coding - go! Concatenated and comments removed, ROM is 259 bytes!  
+10:35 Hacking with [PXA Viz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) to grab those 3 bytes!!  
+10:50 Plan is to rearrange tile data for better compressability. Spent 1.5hr on this. No joy but improved scripting!  
+11:30 Finally saved the bytes. Making text more compressible. 
+12:00 `EXPORT -T 10PRINT"NOVA".P8.ROM` Submitted first 256b compo entry! 🥳
