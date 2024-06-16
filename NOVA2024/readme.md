@@ -1,7 +1,7 @@
 # 10PRINT"NOVA"
 
-256 byte demo, written at the NOVA 2024 party.  
-First demo party, first entry and first time size coding! Fresh off the press, 24hr production 😅.  
+Tiny 256 byte Intro, written at the NOVA 2024 party.  
+First demo party, first entry and first time size coding! Fresh off the press, 1 day party production 😅.  
 
 Rendered using (mainly) PICO-8 print statements with some crafty P8SCII control characters [(1)](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes)[(2)](https://pico-8.fandom.com/wiki/P8SCII). I think it demonstrates quite an interesting way to encode bitmaps.
 
@@ -19,10 +19,25 @@ x=x+1goto a
 
 <details>
     <summary>Preview spoiler...</summary>
-    <img width="256" height="256" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
+    <img width="384" height="384" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
 </details>
 
 <br>
+
+
+## Acknowledgements
+
+Code was optimized with the excellent [PXA Viz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) tool by @carlc27843.
+
+Special thanks to the NOVA event team, inc. @rc55 and @djh0ffman; Dave84 for encouragement and guidance when I waivered!
+
+
+## Legal
+
+Produced by Andrew C.E. Dent and shared under MIT License; please read the separate LICENSE file.
+
+All trademarks are the property of their respective owners. PICO-8 and Picotron are trademarks of [Lexaloffle Games LLP](https://www.lexaloffle.com/).
+
 
 ---
 
