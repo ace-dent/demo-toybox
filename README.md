@@ -1,2 +1,2 @@
-# demo-toys
+# Tiny demos
 Fun and games!
