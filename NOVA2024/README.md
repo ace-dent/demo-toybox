@@ -29,7 +29,7 @@ x=x+1goto a
 
 Code was optimized with the excellent [PXA Viz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) tool by @carlc27843.
 
-Special thanks to the NOVA event team, inc. @rc55 and @djh0ffman; Dave84 for encouragement and guidance when I wavered!
+Special thanks to the NOVA event team, inc. @rc55 and @djh0ffman; Dave84 for encouragement and guidance when I wavered! Thanks to ne7 who created ASCII art for everyone's handle.
 
 
 ## Legal
@@ -90,5 +90,8 @@ All trademarks are the property of their respective owners. PICO-8 and Picotron 
 
 Really wonderful experience of attending- amazing, talented people- all very welcoming. It was a bit stressful coding at the party, so will try to prepare an entry in advance next year 😅. Fantastic to see presented on the Big Screen!
 
-[![Presentation](https://raw.githubusercontent.com/ace-dent/demo-toybox/main/NOVA2024/assets/thumbnail.jpg)](https://raw.githubusercontent.com/ace-dent/demo-toybox/main/NOVA2024/assets/video.mp4)
+<br>
 
+<a href="https://raw.githubusercontent.com/ace-dent/demo-toybox/main/NOVA2024/assets/video.mp4">
+    <img width="360" height="360" src="assets/thumbnail.jpg" alt="Presentation">
+<a>
