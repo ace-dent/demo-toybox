@@ -17,10 +17,7 @@ x=x+1goto a
 
 <br>
 
-<details>
-    <summary>Preview (spoiler!)...</summary>
-    <img width="384" height="384" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
-</details>
+<img width="384" height="384" src="./assets/10PRINT^NOVA^-preview.gif" alt="">
 
 <br>
 
@@ -95,3 +92,34 @@ Really wonderful experience of attending- amazing, talented people- all very wel
 <a href="https://raw.githubusercontent.com/ace-dent/demo-toybox/main/NOVA2024/assets/video.mp4">
     <img width="360" height="360" src="assets/thumbnail.jpg" alt="Presentation">
 <a>
+
+### Future improvements
+
+Some ideas that may improve or minimise the Intro, or be of use in future work:
+- Work with [Shrinko8](https://thisismypassport.github.io/shrinko8/) by @thisismypassport.
+- Smarter maths to avoid `()` using precedence; optimize for PXA compression.
+- `⁶h` set a new cursor [home position](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes#Homing_the_cursor), to avoid padding rows with empty tiles.
+- Try storing bitmap in hex decimals rather than P8SCII as they may compress better. Then also try using hex digits to encode the tile map for symbol repetition.
+- Order the tile with the longest run of trailing zeroes, to be stored last (and bytes truncated to use memory default `0x00`). But PXA is pretty effective at compressing those runs, so may not help.
+- Store the code to setup 8x8 font `⁶@56000003⁸x⁸` at the end of another print statement (e.g. tile map) as `⁶!5600⁸x⁸` (saves 4 chrs and may compress better). Note: Must not follow another `⁶!01ab` continuous memory write.
+- When the tile map is 4 or more rows, (i.e. `\n`x3+), try multi line print statement `[[...]]`. Also, multiple end of line symbols `␊` may compress better overall.
+- Consider brighter colours that will show up better on projected Big Screen. (i.e. is `2` too dark?). Use the secret palette at a cost of +1 symbol (e.g. `-3`).
+- Always check if constants can be [minimized](https://www.lexaloffle.com/bbs/?tid=44801). 
+- Shorten assignments `x+=1`.
+
+With just some of these tricks, an *expanded* form of the code can be compressed to 254 bytes.
+
+```lua
+x=140
+?"⁶!5908ヲヲヲヲヲヲヲヲ◝◝◝◝\0\0\0\0?○◝◝ヲヲヲヲヲヲヲヲヲヲユナ\0\0\0\0゜?○◝ユナら█\0\0\0\0¹³⁷⁷ᶠᶠ゜゛><|xヲユユナナらら██\0\0\0\0\0\0\0\0\0▒▒れれフ◝◝◝~<⁷³³¹¹\0\0\0|<>゛゜ᶠᶠ⁷█らナナユユヲx³³⁷⁷◝◝◝◜"
+::a::
+i=sin(x/500)*150-100
+circ(98+i,54,40+i/5,9)
+circ(98+i,54,25+i/2,10)
+cursor(i,32,2)
+?[[ᵉ⁶pabbc000fbg0ng
+a00a00000hjmhj
+a00de0000iklioe⁶1⁶c⁶!5600⁸x⁸]]
+x+=1
+goto a
+```
