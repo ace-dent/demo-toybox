@@ -99,13 +99,15 @@ Some ideas that may improve or minimise the Intro, or be of use in future work:
 - Work with [Shrinko8](https://thisismypassport.github.io/shrinko8/) by @thisismypassport.
 - Smarter maths to avoid `()` using precedence; optimize for PXA compression.
 - `⁶h` set a new cursor [home position](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes#Homing_the_cursor), to avoid padding rows with empty tiles.
-- Try storing bitmap in hex decimals rather than P8SCII as they may compress better. Then also try using hex digits to encode the tile map for symbol repetition.
+- Try storing bitmaps in hex decimal form rather than P8SCII, as the digits may compress better. This won't work for poking with `\^!` (must be raw binary), only for one-off characters. E.g. using `\^:000102030405060708` instead of `\^.\0¹²³⁴⁵⁶⁷⁸` , if `0` symbol repeats often. Experimenting with these tiles, shows worse compression with hex codes.
 - Order the tile with the longest run of trailing zeroes, to be stored last (and bytes truncated to use memory default `0x00`). But PXA is pretty effective at compressing those runs, so may not help.
 - Store the code to setup 8x8 font `⁶@56000003⁸x⁸` at the end of another print statement (e.g. tile map) as `⁶!5600⁸x⁸` (saves 4 chrs and may compress better). Note: Must not follow another `⁶!01ab` continuous memory write.
 - When the tile map is 4 or more rows, (i.e. `\n`x3+), try multi line print statement `[[...]]`. Also, multiple end of line symbols `␊` may compress better overall.
 - Consider brighter colours that will show up better on projected Big Screen. (i.e. is `2` too dark?). Use the secret palette at a cost of +1 symbol (e.g. `-3`).
 - Always check if constants can be [minimized](https://www.lexaloffle.com/bbs/?tid=44801). 
 - Shorten assignments `x+=1`.
+- Check if constants can be tweaked (`98`>`100`, etc.).
+- Try replacing some blanks in the tile map with more compressible symbols that occur in the code (e.g. `0000` > `urso`).
 
 With just some of these tricks, an *expanded* form of the code can be compressed to 254 bytes.
 
