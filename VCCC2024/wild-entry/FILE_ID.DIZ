@@ -1,0 +1,21 @@
+#*=~-------------------------------~=*#
+ title    : Pressie
+ author   : ACED
+ released : VCCC, 25 December 2024
+ category : Wild, sizecoded 76 bytes
+ platform : PICO-8
+-
+ Tiny Pressie with flashing xmas light
+ effect. Mash <Escape> to quit.
+#*=~-------------------------------~=*#
+
+                                       _________                   ______
+   _________  _________  _______    ___\     __/ _______ _____  ___|    T__
+  /        /_/        / /   __  \   \        /_ /   __  \\    \|   |      T__.
+__\_______  T    /___/__\ __Z/__/_ _/  __     |_\ __Z/__/_\    \   |   ___|  |
+|_   \/  _  |_  /     |   \      | |_  Z/  _  |   \     /   _   \  |   Z/    |
+ /______//__|/________|__________|  /______\__|________/\__//______|___     _|
+                    dS!NE7                    @ace-dent               /______\
+
+https://github.com/ace-dent/demo-toybox/tree/main/VCCC2024
+https://www.aced.cafe
