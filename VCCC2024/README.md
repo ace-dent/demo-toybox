@@ -28,7 +28,7 @@ The Vintage Computing Christmas Challenge (VCCC / VC³) is a size coding challen
 
 ## Information theory
 
-The ASCII art is 19 characters wide (1+8+1+8+1) and 20 characters high (1+1+8+1+8+1). Allowing for a new line symbol on each row, gives 20 x 20 x 1 byte per character; directly encoding the image requires 400 bytes (e.g. as a text file). 
+The ASCII art is 19 characters wide (1+8+1+8+1) and 20 characters high (1+1+8+1+8+1). Allowing for a new line symbol on each row, gives 20 x 20 x 1 byte per character; directly encoding the image as a text file requires 400 bytes. 
 
 We can do a little better by removing the trailing whitespace on the first row, after the bow 🎀 . 
 
@@ -44,27 +44,23 @@ We can see there are duplicated structures in both x- and y-directions. Hopefull
 xz --compress --keep --format=raw -9 -e --suffix=.lzma ascii.txt
 ```
 
-This gives us a file of 34 bytes or 272 bits. For essentially 364 symbols (19*19 +3), each symbol has on average ~0.8 bits of information. 
+This gives us a file of 34 bytes or 272 bits. For essentially 364 symbols (19*19 +3), each symbol has on average ~0.8 bits of information. The low bit rate is due to the limited symbols `" +-!\o/"` and the repeating patterns.
 
-
-Encoding as PNG
-
-greyscale can hold ascii values in single byte here. To help visualize, I have prepared a colorized version scaled up:
+We can also estimate the information content, by encoding as a PNG image. This file format exploits x-/y-repetition with [delta filtering](https://www.w3.org/TR/PNG-Filters.html) as a first step in compression. Each ASCII character can be stored as a greyscale value (1 byte per pixel) in a bitmap image of 19x20 pixels ([here](assets/bitmap.png)). To help visualise this, it is easier to look at an enlarged, colourised version:
 
 <img width="128" height="128" src="assets/bitmap-color.png" alt="">
 
-<br>
+<small>(Whitespace, `␠`, 0x20; Red `!` 0x21; Green `-` 0x2D; Purple `+` 0x2B; Blue `\` 0x5C; Orange `o` 0x6F; Teal `/` 0x2F).</small>
 
-Optimized file is 90 bytes, but contains overhead of container format. The actual bitmap data stored in the `IDAT` chunk is 33 bytes. This is inline with our result using LZMA.
+The optimised PNG file is 90 bytes, but contains the overhead of a container format. The actual bitmap data stored in the `IDAT` chunk is just 33 bytes. This is inline with our result using LZMA.
 
-Since our code must have some overhead for rendering and decoding, an absolute minimum is likely to be ~ **40 bytes**.
-
+Since our code must have some overhead for rendering and decoding, an absolute minimum is likely to be ~ **40 bytes** for a program.
 
 ## Main entry (PICO-8)
 
-Although not 'vintage', allowable.
+Although the competition targets 'vintage' computers, fantasy console entries are allowed.
 
-Rendered using PICO-8 print statements with some crafty P8SCII control characters [(1)](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes)[(2)](https://pico-8.fandom.com/wiki/P8SCII).
+My main entry is rendered using PICO-8 print statements with some crafty P8SCII control characters [(1)](https://pico-8.fandom.com/wiki/P8SCII_Control_Codes)[(2)](https://pico-8.fandom.com/wiki/P8SCII).
 
 ```lua
 --vccc2024 in 66 chars
@@ -86,9 +82,7 @@ Downloadable rom file is [here](vccc2024.p8.rom) (66 bytes).
 
 ## Wild entry – 'Pressie'
 
-I wanted to run with the gift theme. Some P8SCII to unwrap.
-
-Use punycode if copy & pasting.<kbd>Ctrl</kbd>+<kbd>P</kbd>
+I wanted to run with the gift theme. Some P8SCII to unwrap. (Use 'punycode' mode if copy & pasting! <kbd>Ctrl</kbd>+<kbd>P</kbd>).
 
 ```lua
 --pressie in 76 chars
@@ -116,7 +110,7 @@ This is a tiny 'Pressie', with a flashing Christmas light effect. Entirely rende
 
 Compression tested with the excellent [PXA Viz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) tool by @carlc27843 and [Shrinko8](https://thisismypassport.github.io/shrinko8/) by @thisismypassport.
 
-Special thanks to the organizer @logiker464 for this excellent challenge. My ASCII art name tag was created by ne7.
+Special thanks to the organizer @logiker464 for this excellent challenge. My ASCII art handle was created by ne7.
 
 Tools:
 - https://thisismypassport.github.io/shrinko8/
@@ -195,12 +189,12 @@ Can we help the PXA compression a little? Sure! We can combine all the rows into
 -- 396 chars / 53 bytes PXA compressed
 ```
 
-I think 53 bytes represents the best we can do with PXA compression and is close to the 40 byte minimum I specified... BUT!... The VCCC competition rules excludes the use of these built in file compressors, to level the playing field and encourage some *actual* coding!
+I think 53 bytes represents the best we can do with PXA compression and is close to the 40 byte minimum I specified... BUT!... The VCCC competition rules exclude the use of these built in file compressors, to level the playing field and encourage some *actual* coding!
 
 
 ### 3. Coding patterns
 
-Ok, first effort to code something.
+Ok, first effort to code something.  
 Exploit repetitions in the symbols.
 
 ```lua
@@ -214,12 +208,12 @@ for i=1,8do?v
 end?h
 -- 86 chars / 61 bytes PXA compressed
 ```
-Increased entropy, as PXA compression decreases from 53 to 61 bytes.
+Increased entropy, as PXA compression becomes less effective from 53 to 61 bytes.
 
 ### 4. Hacking with PETSCII
 
-Multiple characters
-Replace spaces with horizontal offsets
+Multiple characters.  
+Replace spaces with horizontal offsets.  
 Combine some lines of the for loop to avoid whitespace.
 
 ```lua
@@ -240,7 +234,7 @@ for n=0,18do?o[min(n%9,1)+1]
 end
 -- 67 chars / 72 bytes PXA compressed
 ```
---  using tables and single for loop
+Using tables and single for loop.
 
 ### 6. Last byte
 
@@ -250,12 +244,12 @@ for n=0,18do?({"+¹8-+¹8-+","!³♥!³♥!"})[min(n%9,1)+1]
 end
 -- 66 chars / 73 bytes PXA compressed
 ```
--1 chr directly assign table
+-1 chr directly assign table.  
 This is the best solution I could achieve. In experimenting with more complex schemes, the overhead was too great.
 
 ### 7. Bonus: Fancy printing
 
-Using the 'forbidden' [palette](https://nerdyteachers.com/PICO-8/Guide/?PALETTES), which provides a nice colour ramp going from `-1` to `-8`.
+Using the 'forbidden' [palette](https://nerdyteachers.com/PICO-8/Guide/?PALETTES), which provides a nice colour ramp going from `-1` to `-8`.  
 Add pauses for a teletype effect.
 
 ```lua
@@ -273,4 +267,12 @@ end
 
 ## Epilogue
 
-TBC
+Around 135 entrants, from over 40 countries, with more than 75 different computer systems.
+
+The smallest in each category:
+David Payne, BBC BASIC for BBC Micro, 53 bytes.
+Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
+GeirS, 6502 ASM for Commodore C128, 41 bytes.
+Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).
+
+Presentation of my [Main](https://youtu.be/kJYbIC-14s4&t=3314) and [Wild](https://youtu.be/kJYbIC-14s4&t=1912) entries.
