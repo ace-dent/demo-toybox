@@ -50,7 +50,7 @@ We can also estimate the information content, by encoding as a PNG image. This f
 
 <img width="128" height="128" src="assets/bitmap-color.png" alt="">
 
-<small>(Whitespace, `␠`, 0x20; Red `!` 0x21; Green `-` 0x2D; Purple `+` 0x2B; Blue `\` 0x5C; Orange `o` 0x6F; Teal `/` 0x2F).</small>
+<small>(Whitespace `␠` 0x20; Red `!` 0x21; Green `-` 0x2D; Purple `+` 0x2B; Blue `\` 0x5C; Orange `o` 0x6F; Teal `/` 0x2F).</small>
 
 The optimised PNG file is 90 bytes, but contains the overhead of a container format. The actual bitmap data stored in the `IDAT` chunk is just 33 bytes. This is inline with our result using LZMA.
 
@@ -90,7 +90,7 @@ I wanted to run with the gift theme. Some P8SCII to unwrap. (Use 'punycode' mode
 ?[[⁶c1⁶p
 
 	⁶.0Pナ~◝kミw⁶.⁶⁵³?○s{s
-	⁶.◝U◝gワg◝~⁶.○U○s{s○?⁶!5f2c³]],-rnd(3))
+	⁶.◝U◝gワg◝~⁶.○U○s{s○?⁶!5f2c³]],-rnd(3)
 run()
 ```
 
@@ -130,6 +130,7 @@ All trademarks are the property of their respective owners. PICO-8 and Picotron 
 ## PICO-8 - devlog
 
 Testing done with [PXAViz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) and 
+
 Avoid `cls()`, as this is hot on PXA. Escape the slash `\\`.
 
 ### 1. Naive approach
@@ -254,7 +255,7 @@ Add pauses for a teletype effect.
 
 ```lua
 cls()
-h="\^d1+¹8-+¹8-+"v="!³♥!³♥\^d2!"
+h="⁶d1+¹8-+¹8-+"v="!³♥!³♥⁶d2!"
 ?"³♥\\o/"
 ?h
 for f=1,2do for f=1,8do?v,-f
@@ -269,10 +270,10 @@ end
 
 Around 135 entrants, from over 40 countries, with more than 75 different computer systems.
 
-The smallest in each category:
-David Payne, BBC BASIC for BBC Micro, 53 bytes.
-Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
-GeirS, 6502 ASM for Commodore C128, 41 bytes.
-Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).
-
 Presentation of my [Main](https://youtu.be/kJYbIC-14s4&t=3314) and [Wild](https://youtu.be/kJYbIC-14s4&t=1912) entries.
+
+The smallest in each category:
+- David Payne, BBC BASIC for BBC Micro, 53 bytes.
+- Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
+- GeirS, 6502 ASM for Commodore C128, 41 bytes.
+- Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).
