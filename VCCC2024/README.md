@@ -82,7 +82,7 @@ Downloadable rom file is [here](vccc2024.p8.rom) (66 bytes).
 
 ## Wild entry – 'Pressie'
 
-I wanted to run with the gift theme. Some P8SCII to unwrap. (Use 'punycode' mode if copy & pasting! <kbd>Ctrl</kbd>+<kbd>P</kbd>).
+I wanted to run with the gift theme, with some P8SCII to unwrap. (Use 'punycode' mode if copy & pasting! <kbd>Ctrl</kbd>+<kbd>P</kbd>).
 
 ```lua
 --pressie in 76 chars
@@ -112,8 +112,7 @@ Compression tested with the excellent [PXA Viz](https://carlc27843.itch.io/pico-
 
 Special thanks to the organizer @logiker464 for this excellent challenge. My ASCII art handle was created by ne7.
 
-Tools:
-- https://thisismypassport.github.io/shrinko8/
+Useful resources and tips:
 - https://itch.io/jam/pico-1k-2024
 
 
@@ -268,12 +267,15 @@ end
 
 ## Epilogue
 
-Around 135 entrants, from over 40 countries, with more than 75 different computer systems.
+There were around 135 entrants, from over 40 countries, with more than 75 different computer systems. Logiker posted ranked [entries](https://logiker.com/Vintage-Computing-Christmas-Challenge-2024-Results), giving the median size of 93 bytes and positioning my 66 byte entry in the top 20th percentile. 🎉
 
-Presentation of my [Main](https://youtu.be/kJYbIC-14s4&t=3314) and [Wild](https://youtu.be/kJYbIC-14s4&t=1912) entries.
+🏆 Main placed 40th out of 200+ entries!  
+[ [demozoo](https://demozoo.org/productions/364047/) | [pouet](https://www.pouet.net/prod.php?which=103275) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/christmas_challenge/ace-dent_pico8_lua_66b_vc3-2024.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=3314s) ]  
+🥈 Wild placed 2nd  
+[ [demoszoo](https://demozoo.org/productions/364280/) | [pouet](https://www.pouet.net/prod.php?which=103278) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/wild/pressie_ace-dent.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=1912s) ]
 
 The smallest in each category:
-- David Payne, BBC BASIC for BBC Micro, 53 bytes.
-- Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
-- GeirS, 6502 ASM for Commodore C128, 41 bytes.
-- Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).
+- 🥉 David Payne, BBC BASIC for BBC Micro, 53 bytes.
+- 🥈 Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
+- 🥈 GeirS, 6502 ASM for Commodore C128, 41 bytes.
+- 🥇 Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).

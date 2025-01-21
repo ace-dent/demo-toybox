@@ -83,7 +83,8 @@ All trademarks are the property of their respective owners. PICO-8 and Picotron 
 
 ## Epilogue
 
-🏆 Happily placed 7th out of 10, with some great entries in the category ([demozoo](https://demozoo.org/parties/4693/#competition_18960))([pouet](https://www.pouet.net/party.php?which=1808&when=2024)). 
+🏆 Happily placed 7th out of 10, with some great entries in the category.   
+[ [demozoo](https://demozoo.org/parties/4693/#competition_18960) | [pouet](https://www.pouet.net/prod.php?which=97189) | [scene.org](https://files.scene.org/view/parties/2024/nova24/tiny_intro_256/10print-nova-.p8.rom.zip) ]
 
 Really wonderful experience of attending- amazing, talented people- all very welcoming. It was a bit stressful coding at the party, so will try to prepare an entry in advance next year 😅. Fantastic to see presented on the Big Screen!
 
