@@ -128,14 +128,12 @@ All trademarks are the property of their respective owners. PICO-8 and Picotron 
 
 ## PICO-8 - devlog
 
-Testing done with [PXAViz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) and 
-
-Avoid `cls()`, as this is hot on PXA. Escape the slash `\\`.
+Development steps were tested with [PXAViz](https://carlc27843.itch.io/pico-8-source-compression-visualizer) and [Shrinko8](https://thisismypassport.github.io/shrinko8/), to analyse the effects of reducing character count vs PXA compression. It was immediately obvious to skip  `cls()`, as screen clearing was explicitly not required. Unfortunately P8 / Lua requires an extra character for the 'bow', as we must escape the back slash `\\` in a text string.
 
 ### 1. Naive approach
 
-Compression using - `EXPORT -T VCCC2024.P8.ROM`  Exporting a code-only compressed file
-is possible since version 0.2.4.c
+Compression using - `EXPORT -T VCCC2024.P8.ROM`.  Exporting a code-only compressed file
+is possible since version 0.2.4.c.
 
 ```lua
 ?"        \\o/"
@@ -271,11 +269,19 @@ There were around 135 entrants, from over 40 countries, with more than 75 differ
 
 🏆 Main placed 40th out of 200+ entries!  
 [ [demozoo](https://demozoo.org/productions/364047/) | [pouet](https://www.pouet.net/prod.php?which=103275) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/christmas_challenge/ace-dent_pico8_lua_66b_vc3-2024.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=3314s) ]  
-🥈 Wild placed 2nd  
-[ [demoszoo](https://demozoo.org/productions/364280/) | [pouet](https://www.pouet.net/prod.php?which=103278) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/wild/pressie_ace-dent.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=1912s) ]
+🥈 Wild placed 2nd (joint class).  
+[ [demozoo](https://demozoo.org/productions/364280/) | [pouet](https://www.pouet.net/prod.php?which=103278) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/wild/pressie_ace-dent.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=1912s) ]
 
 The smallest in each category:
 - 🥉 David Payne, BBC BASIC for BBC Micro, 53 bytes.
 - 🥈 Longshot / Logon System, Z80 ASM for Amstrad CPC 6128, 41 bytes.
 - 🥈 GeirS, 6502 ASM for Commodore C128, 41 bytes.
 - 🥇 Logiker, APL for PC, 34 bytes explained [here](https://youtu.be/kJYbIC-14s4&t=3409).
+
+After the event I invited feedback on the Sizecoding Discord. A neat solution was provided by [superogue](https://discord.com/channels/787349849808699433/892738917667831889/1334144537681068164) at **57 bytes**! This avoids the overhead of Lua tables (which start at 1, not 0 😣), by using `i%9>0` as a boolean to logically switch between the rows. This gets the entry under 64 bytes and would have placed ~27th.
+
+```lua
+?"³♥\\o/"
+for i=0,18do?i%9>0and"!³♥!³♥!"or"+¹8-+¹8-+"
+end
+```
