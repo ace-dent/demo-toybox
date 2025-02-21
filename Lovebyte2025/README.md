@@ -121,6 +121,9 @@ Quite a few bytes were allocated to the animation function `56*min(t()/i,1)^j`. 
 
 ## Epilogue
 
-TBC
+🏆 **64 bytes**  – Placed 8th.   
+[ [demozoo](https://demozoo.org/productions/367709/) | [pouët](https://www.pouet.net/prod.php?which=103624) | [scene.org](https://files.scene.org/view/parties/2025/lovebyte25/64_byte_intro_highend/ace-dent_eyeswideopen.zip) | [YouTube](https://www.youtube.com/watch?v=WKLNvz5Qkmo&t=304s) ]
 
+🏆 **Text graphics** – Placed 19th.  
+[ [demozoo](https://demozoo.org/graphics/367653/) | pouët | [scene.org](https://files.scene.org/view/parties/2025/lovebyte25/text_graphics/yoda-16.zip) | YouTube ]
 
