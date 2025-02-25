@@ -7,5 +7,7 @@
 *.DIZ text eol=lf
 
 # Denote files that are truly binary (macro for -text -diff)
+*.ans binary
 *.jxl binary
 *.png binary
+*.rom binary

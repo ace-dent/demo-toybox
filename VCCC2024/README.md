@@ -268,9 +268,9 @@ end
 There were around 135 entrants, from over 40 countries, with more than 75 different computer systems. Logiker posted ranked [entries](https://logiker.com/Vintage-Computing-Christmas-Challenge-2024-Results), giving the median size of 93 bytes and positioning my 66 byte entry in the top 20th percentile. 🎉
 
 🏆 Main placed 40th out of 200+ entries!  
-[ [demozoo](https://demozoo.org/productions/364047/) | [pouet](https://www.pouet.net/prod.php?which=103275) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/christmas_challenge/ace-dent_pico8_lua_66b_vc3-2024.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=3314s) ]  
+[ [demozoo](https://demozoo.org/productions/364047/) | [pouët](https://www.pouet.net/prod.php?which=103275) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/christmas_challenge/ace-dent_pico8_lua_66b_vc3-2024.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=3314s) ]  
 🥈 Wild placed 2nd (joint class).  
-[ [demozoo](https://demozoo.org/productions/364280/) | [pouet](https://www.pouet.net/prod.php?which=103278) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/wild/pressie_ace-dent.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=1912s) ]
+[ [demozoo](https://demozoo.org/productions/364280/) | [pouët](https://www.pouet.net/prod.php?which=103278) | [scene.org](https://files.scene.org/view/parties/2024/vccc24/wild/pressie_ace-dent.zip) | [YouTube](https://www.youtube.com/watch?v=kJYbIC-14s4&t=1912s) ]
 
 The smallest in each category:
 - 🥉 David Payne, BBC BASIC for BBC Micro, 53 bytes.

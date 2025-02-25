@@ -16,3 +16,11 @@ trim_trailing_whitespace = false
 [*.DIZ]
 indent_size = 1
 trim_trailing_whitespace = false
+
+[*.{rom,ans}]
+charset = unset
+indent_style = unset
+indent_size = unset
+trim_trailing_whitespace = unset
+end_of_line = unset
+insert_final_newline = unset
