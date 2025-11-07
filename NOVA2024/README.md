@@ -108,6 +108,8 @@ Some ideas that may improve or minimise the Intro, or be of use in future work:
 - Shorten assignments `x+=1`.
 - Check if constants can be tweaked (`98`>`100`, etc.).
 - Try replacing some blanks in the tile map with more compressible symbols that occur in the code (e.g. `0000` > `urso`).
+- TODO: Is it more compact to put one-off character directly into map print stream, rather than store in font table? But it takes 2 bytes of overhead to start 1-off-char? 
+- TODO: Find 'common' tiles that just need to be offset by a small x/y-position? What is the overhead
 
 With just some of these tricks, an *expanded* form of the code can be compressed to 254 bytes.
 
